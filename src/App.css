@@ -1,0 +1,127 @@
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto
+}
+button {
+    cursor: pointer;
+}
+.result {
+    position: absolute;
+    border-bottom: 0.5px solid rgba(0,0,0,0.2);
+    border-right: 0.5px solid rgba(0,0,0,0.2);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+    width: 500px;
+    padding: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+    background: white
+}
+
+.questions {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    border-bottom: 0.5px solid rgba(0,0,0,0.2);
+    border-right: 0.5px solid rgba(0,0,0,0.2);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 20px;
+}
+.questions .questbtn {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px 8px;
+    border: 0;
+    transition: all 0.2s;
+}
+ .questbtn:hover {
+    background: rgba(0,0,0,0.5);
+    color: white;
+}
+.signin {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    border-bottom: 0.5px solid rgba(0,0,0,0.2);
+    border-right: 0.5px solid rgba(0,0,0,0.2);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+    padding: 20px;
+    width: 40%;
+}
+.signin h4 {
+    text-align: center
+}
+.signin input {
+    border: 0;
+    border-bottom: 1px solid grey;
+    width: 100%;
+    line-height: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 3px 5px;
+}
+.signin .signbtn {
+    margin-top: 10px;
+    padding: 4px 8px;
+    border: 0;
+    transition: all 0.2s;
+}
+.signbtn:hover {
+    background: rgba(0,0,0,0.5);
+    color: white;
+
+}
+.setupform {
+    margin-top: 50px;
+    border-bottom: 0.5px solid rgba(0,0,0,0.2);
+    border-right: 0.5px solid rgba(0,0,0,0.2);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: center;
+    padding: 30px;
+}
+
+.setupform input {
+    width: 100%;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    padding: 7px 10px
+    
+}
+.setupform select {
+    width: 100%;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    padding: 7px 10px;
+}
+.setupbtn {
+    margin-top: 10px;
+    padding: 4px 8px;
+    border: 0;
+    transition: all 0.2s;
+}
+.setupbtn:hover {
+    background: rgba(0,0,0,0.5);
+    color: white;
+}
+.resultbtn {
+    padding: 4px 8px;
+    border: 0;
+    transition: all 0.2s;
+    margin-right: 10px
+}
+.resultbtn:hover {
+    background: rgba(0,0,0,0.5);
+    color: white;
+}
