@@ -1,15 +1,16 @@
 import React, {useState} from 'react';
-import {connect} from 'react-redux';
+import {QuestionContext} from '../../context/Context';
 
-import {getQuestions} from '../../store/actions/getQuestions';
-
-function SetupForm({ getQuestions, history }) {
+function SetupForm({ history }){
 
   const [state, setState] = useState({
     amount: '',
     category: '',
     difficulty: ''
-  })
+  });
+
+  const { getQuestions } = React.useContext(QuestionContext);
+
   const categories = [
     {name: 'Any category', value: 0},
     {name: 'General knowledge', value: 9},
@@ -82,5 +83,4 @@ function SetupForm({ getQuestions, history }) {
   )
 }
 
-export default connect(null, {getQuestions})(SetupForm);
-
+export default SetupForm;

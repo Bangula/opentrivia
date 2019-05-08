@@ -1,9 +1,16 @@
 import React, {useState} from 'react';
-import {connect} from 'react-redux';
-import {setUser} from '../../store/actions/authActions';
 
-function SignIn({ history, setUser }) {
+// With Redux
+// import {connect} from 'react-redux';
+// import {setUser} from '../../store/actions/authActions';
+
+import {QuestionContext} from '../../context/Context';
+
+function SignIn({ history }) {
     const [userName, setUserName] = useState('');
+
+    const { setUser } = React.useContext(QuestionContext);
+
     const handleChange = (e) => {
         setUserName(e.target.value);
     }
@@ -26,4 +33,5 @@ function SignIn({ history, setUser }) {
   )
 }
 
-export default connect(null, {setUser})(SignIn);
+// export default connect(null, {setUser})(SignIn);
+export default SignIn;

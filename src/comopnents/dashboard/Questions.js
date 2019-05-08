@@ -1,13 +1,19 @@
 import React, {useState} from 'react';
-import {connect} from 'react-redux';
+
+import {QuestionContext} from '../../context/Context';
 
 import { XmlEntities } from 'html-entities';
 const entities = new XmlEntities();
 
-function Questions({ questions, user, history }) {
+  function Questions({ history }){
+
     const [increm, setIncrem] = useState(0);
     const [correct, setCorrect] = useState([]);
     const [result, setResult] = useState(false);
+
+    const {state} = React.useContext(QuestionContext);
+
+    const { questions, user } = state;
     
     
     let numOfQuestions;
@@ -60,7 +66,6 @@ function Questions({ questions, user, history }) {
     <div className="container questions">
        <div className='mt-5'>
           <p className='text-center'>Question num: { increm + 1 }</p>
-          {/* <h3 className='text-center mb-4'>{ questions.length ? questions[increm].question : null }</h3> */}
           <h3 className='text-center mb-4'>{ questionName }</h3>
         
           {questionsArr && questionsArr}
@@ -78,11 +83,5 @@ function Questions({ questions, user, history }) {
   )
 }
 
-const mapStateToProps = (state) => {
-    return {
-        questions: state.questions.questions,
-        user: state.user.user
-    }
-};
 
-export default  connect(mapStateToProps)(Questions);
+export default Questions;
